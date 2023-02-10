@@ -18,9 +18,9 @@ const refresh = document.querySelector("#refresh");
 let checkValue = (element) => {
     element.classList.remove("text-danger");
 
-    if(isNaN(element.value) || element.value == ""){
+    if(isNaN(element.value) || element.value == "" || element.value <= 0){
         element.classList.add("text-danger");
-        element.value = "Üres mező vagy nem szám!";
+        element.value = "Hibás adat!";
         return false;
     }else{
         return true;
