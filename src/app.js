@@ -4,7 +4,7 @@ Author: Faragó Csaba
 Copyright: 2023, Faragó Csaba
 Group: Szoft I-1-E
 Date: 2023-02-08
-Github: https://github.com/
+Github: https://github.com/szalami/dolgozat_3.git
 Licenc: GNU GPL
 */
 
@@ -37,4 +37,12 @@ result.addEventListener("click", ()=> {
             calculateResult();
             refresh.classList.remove("hidden");
         }
+});
+
+refresh.addEventListener("click", () => {
+    inputField = document.getElementsByTagName("input");
+    for (let i = 0; i < inputField.length; i++) {
+        inputField[i].value = "";     
+    }
+    refresh.classList.add("hidden");
 });
