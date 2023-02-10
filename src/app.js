@@ -7,3 +7,32 @@ Date: 2023-02-08
 Github: https://github.com/
 Licenc: GNU GPL
 */
+
+const length = document.querySelector("#length");
+const push = document.querySelector("#push");
+const rpm = document.querySelector("#rpm");
+const result = document.querySelector("#result");
+
+let checkValue = (element) => {
+    element.classList.remove("text-danger");
+
+    if(isNaN(element.value) || element.value == ""){
+        element.classList.add("text-danger");
+        element.value = "Hibás adat!";
+        return false;
+    }else{
+        return true;
+    }
+}
+
+let calculateResult = () => {
+    result.value = length.value / (push.value * rpm.value);
+}
+
+result.addEventListener("click", ()=> {
+    if( checkValue(length) && 
+        checkValue(push) &&
+        checkValue(rpm) ){
+            calculateResult();
+        }
+});

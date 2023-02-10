@@ -7,3 +7,26 @@ Date: 2023-02-08
 Github: https://github.com/
 Licenc: GNU GPL
 */
+.container {
+    background-color: #fff3cd;
+}
+.center {
+    margin: 0 auto;
+}
+
+.author {
+    display: inline-block;
+}
+
+#result::placeholder { 
+    color: green;
+    opacity: 1; 
+  }
+  
+  #result:-ms-input-placeholder { 
+    color: green;
+  }
+  
+  #result::-ms-input-placeholder {
+    color: green;
+  }
