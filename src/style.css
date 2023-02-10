@@ -30,3 +30,19 @@ Licenc: GNU GPL
   #result::-ms-input-placeholder {
     color: green;
   }
+  #result:hover {
+    cursor: pointer;
+  }
+  
+  #refresh {
+    height: 2em;
+    margin-top: 0.75em;
+  }
+ 
+  #refresh:hover {
+    cursor: pointer;
+  }
+  
+  .hidden {
+    display: none;
+  }

@@ -12,13 +12,14 @@ const length = document.querySelector("#length");
 const push = document.querySelector("#push");
 const rpm = document.querySelector("#rpm");
 const result = document.querySelector("#result");
+const refresh = document.querySelector("#refresh");
 
 let checkValue = (element) => {
     element.classList.remove("text-danger");
 
     if(isNaN(element.value) || element.value == ""){
         element.classList.add("text-danger");
-        element.value = "Hibás adat!";
+        element.value = "Üres mező vagy nem szám!";
         return false;
     }else{
         return true;
@@ -34,5 +35,6 @@ result.addEventListener("click", ()=> {
         checkValue(push) &&
         checkValue(rpm) ){
             calculateResult();
+            refresh.classList.remove("hidden");
         }
 });

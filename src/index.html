@@ -26,26 +26,47 @@ Licenc: GNU GPL
         </div>
 
         <div class="dataForm row pb-3">
+
             <div class="col-md-4">
                 <label for="length" class="form-label">Elem hossza (mm):</label>                      
-                <input type="text" id="length" class="form-control text-center" placeholder="hossz (mm)">
+                <input type="text" 
+                       id="length" 
+                       class="form-control text-center" 
+                       placeholder="hossz (mm)"
+                       onfocus="this.value='';">
             </div>
+
             <div class="col-md-4">
                 <label for="push" class="form-label">Előtolás/ford.(mm):</label>                           
-                <input type="text" id="push" class="form-control text-center" placeholder="előtolás (mm)">
+                <input type="text" 
+                       id="push" 
+                       class="form-control text-center" 
+                       placeholder="előtolás (mm)"
+                       onfocus="this.value='';">
             </div>
+
             <div class="col-md-4 mb-4">
                 <label for="rpm" class="form-label">Főorsó fordulatszám:</label>                          
-                <input type="text" id="rpm" class="form-control text-center" placeholder="ford/perc">
+                <input type="text" 
+                       id="rpm" class="form-control text-center" 
+                       placeholder="ford/perc"
+                       onfocus="this.value='';">
             </div>
-            
+
+            <div class="col-md-4 mt-4"></div>
                 <div class="col-md-4 center">
-                    <label for="result" class="form-label">Megmunkálási idő:</label>                          
-                    <input type="text" id="result" class="form-control text-center text-success fw-bold" placeholder="Számolás" readonly>
+                    <label for="result" class="form-label">Megmunkálási idő (perc):</label>                          
+                    <input type="text" 
+                           id="result" 
+                           class="form-control text-center text-success fw-bold" 
+                           placeholder="Számolás" readonly>
                 </div>
-     
+            <div class="col-md-4 mt-4">
+                <img id="refresh" class="hidden" src="icons/refresh.png" alt="új számolás" title="Új számolás">
+            </div>
         </div>
         <p class="author text-end small bg-secondary p-1 ps-3 pe-3 rounded text-white">Faragó Csaba, Szoft I-1-E, 2023-02-08</p>
+        
     </div>
     <script src="app.js"></script>
 </body>
